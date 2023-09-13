@@ -1,0 +1,79 @@
+.descriptio-box{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+.john-whick{
+    width: 404px;
+    color: black;
+    font-family: DM Sans;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+}
+.rating{
+    display: flex;
+    justify-content: space-between;
+}
+.hero-container{
+    display: flex;
+    justify-content: space-around;
+}
+h3{
+    padding: 0;
+    margin: 0;
+}
+.imdb{
+    width: 184px;
+    height: 17px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.imdb-img{
+    width: 35px;
+    height: 17px;
+}
+.roten-tomato{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+.rotten-img{
+    width: 16px;
+    height: 17px;
+}
+.roten-tomato span{
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+}
+.description{
+    color: black;
+    width: 302px;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+}
+.watch{
+    display: flex;
+    padding: 6px 16px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 6px;
+    background: var(--rose-700, #BE123C);
+    color: white;
+    border: none;
+}
+.watch i{
+   color: #fff;
+}
+.pagination{
+    width: 36px;
+    height: 110px;
+    flex-shrink: 0;
+}

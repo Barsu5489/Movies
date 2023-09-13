@@ -1,0 +1,12 @@
+.nav-container{
+    margin-top: 1rem;
+}
+.nav-container, .logo, .search{
+    display: flex;
+    justify-content: space-around;
+    
+}
+h2{
+    padding: 0;
+    margin: 0;
+}

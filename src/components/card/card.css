@@ -1,0 +1,71 @@
+.poster-img{
+position: relative;
+}
+.watchlist i{
+    color: #9CA3AF;
+    font-size: 30px;
+    background-color: aliceblue;
+    border-radius: 560%;
+}
+.watchlist {
+position: absolute;
+top: 2px;
+right: 1rem;
+
+}
+.movie-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+.movie-card img{
+    width: 250px;
+    height: 370px;
+    flex-shrink: 0;
+}
+.movie-card p{
+    color: var(--gray-400, #9CA3AF);
+    font-family: DM Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.movie-card span{
+    color: var(--gray-900, #111827);
+    font-family: DM Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.movie-info{
+    display: flex;
+    width: 215px;
+    justify-content: space-between;
+  
+}
+.movie-rates img{
+    width: 35px;
+    height: 17px;
+}
+.movie-rates{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 35px;
+    height: 17px;
+ 
+}
+.movie-tomatoe img{
+    width: 16px;
+    height: 17px;
+}
+.movie-tomatoe{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 16px;
+    height: 17px;
+}
