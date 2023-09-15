@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-// import Card from '../card/Card';
+import './movies.css'
+import Card from '../card/Card';
 
 const Movies = () => {
     const [data, setData] = useState([]);
     console.log(data)
-    const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc'
+    const url = 'https://api.themoviedb.org/3/discover/movie?api_key=158edbaf63d53e4ad7b56237b05d5776'
     const options = {
         method: 'GET',
         headers: {
@@ -20,7 +21,7 @@ const Movies = () => {
                 const data = await response.json();
                 console.log(response)
                 console.log(data)
-                setData(data);
+                setData(data.results.slice(0,10));
             } catch (error) {
                 console.error("Error fetching data: ", error);
             }
@@ -30,8 +31,22 @@ const Movies = () => {
     }, []);
 
     return (
-        <div>
-        <img src="https://image.tmdb.org/t/p/w500/" alt="" />
+        <div className='all-mvs'>
+            <div className="featured-movies">
+                <p>Featured Movie</p>
+                <p>See more {'>'}</p>
+            </div>
+        {/* <img src="https://image.tmdb.org/t/p/w500/" alt="" /> */}
+        <div className="grid-container">
+        {data.map((movie, index) => (
+        <Card 
+          key={index}
+          poster={movie.poster_path}
+          title={movie.title}
+          releaseDate={movie.release_date}
+        />
+      ))}
+        </div>
         </div>
     );
 };

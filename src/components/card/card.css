@@ -2,14 +2,20 @@
 position: relative;
 }
 .watchlist i{
-    color: #9CA3AF;
-    font-size: 30px;
-    background-color: aliceblue;
-    border-radius: 560%;
+    color:#ffffffc0;
+    font-size: 25px;
+    padding: 3px;
+    /* background-color: rgb(235, 227, 227); */
+    border-radius: 50%;
 }
 .watchlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(247, 247, 247, 0.5);
+    border-radius: 50%;
 position: absolute;
-top: 2px;
+top: 1rem;
 right: 1rem;
 
 }
@@ -17,12 +23,13 @@ right: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 0.5rem;
+    margin-bottom: 5rem;
 }
 .movie-card img{
-    width: 250px;
-    height: 370px;
-    flex-shrink: 0;
+    width: 300px;
+    height: 400px;
+   
 }
 .movie-card p{
     color: var(--gray-400, #9CA3AF);
@@ -44,6 +51,7 @@ right: 1rem;
     display: flex;
     width: 215px;
     justify-content: space-between;
+    gap: 13rem;
   
 }
 .movie-rates img{
@@ -65,7 +73,7 @@ right: 1rem;
 .movie-tomatoe{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     width: 16px;
     height: 17px;
 }

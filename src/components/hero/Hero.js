@@ -1,8 +1,11 @@
 import React from 'react'
 import './hero.css'
+import Navbar from '../navbar/Navbar'
 
 function Hero() {
   return (
+    <div className="hero-wick-pic">
+      <Navbar />
     <div className="hero-container">
     <div className='descriptio-box'>
         <div className="john-whick">
@@ -30,12 +33,13 @@ function Hero() {
     <div></div>
     <div className="pagination">
       <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>1</li>
+        <li>2</li>
+        <li className='selected-page-num'> <div className='selected-page'></div>3</li>
+        <li>4</li>
+        <li>5</li>
       </ol>
+    </div>
     </div>
     </div>
   )

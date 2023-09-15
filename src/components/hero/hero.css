@@ -2,7 +2,8 @@
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    padding-top: 8rem;
+    gap: 2rem;
 }
 .john-whick{
     width: 404px;
@@ -13,17 +14,57 @@
     font-weight: 700;
     line-height: 56px;
 }
+.pagination {
+    position: absolute;
+    top: 35%;
+    right: 2rem;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.pagination li {
+  list-style: none;
+}
+.selected-page-num{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+    
+}
+.selected-page{
+    border: 1px solid wheat;
+    background-color: #fff;
+    position: absolute;
+    right: 15px;
+    width: 1rem;
+    height: 0.1rem;
+}
 .rating{
     display: flex;
     justify-content: space-between;
 }
 .hero-container{
-    display: flex;
-    justify-content: space-around;
+    margin-left: 11.5rem;
+    color: #fff;
+  
+
+}
+.hero-wick-pic{
+    height: 70vh;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),  url('https://s3-alpha-sig.figma.com/img/154e/382f/b7e8be84d7248b8b9812172cad1cd0c9?Expires=1695600000&Signature=OsNLaMa8CnSNnQeUuaSqQc4ItYP-nbUj0fcZVpScVICd8NzZdIEz80MJBNhEju2IQOUMxTFuDw4FavRj8rGqkBK6uLeq0vJG~Y-EPhP~LInckDsnzuQ5Y2BdrMTWOqkPaFdDAPmQXSLpWteihqFaB2f2VQGC6Za5gHu7t3hq62C0X21qB-8H7osPvHdFmh0c-B881mmDx6JQCfpUQRzNHAjMxdvS~LrFQthLfxQb29n8J4z25KNx4cSOzRDCMXJaP0gpPcPRXMYrFdz-nbt~yFJLM37b1YLKasT2gd5K2x6nxGQWVPlwAafWCDzo3TzVihPSl0FiwjfkbBREka5jUQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+    background-position: center;
+    background-size: cover;
+    
 }
 h3{
     padding: 0;
     margin: 0;
+    color: #fff;
 }
 .imdb{
     width: 184px;
@@ -50,14 +91,18 @@ h3{
     font-weight: 400;
     line-height: 12px;
 }
+
 .description{
-    color: black;
+    color: white;
     width: 302px;
     font-family: DM Sans;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 18px;
+}
+.description p{
+    font-size: 15px;
 }
 .watch{
     display: flex;
