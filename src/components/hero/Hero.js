@@ -1,9 +1,11 @@
 import React from 'react'
 import './hero.css'
 import Navbar from '../navbar/Navbar'
+import Movies from '../movies/Movies'
 
 function Hero() {
   return (
+    <>
     <div className="hero-wick-pic">
       <Navbar />
     <div className="hero-container">
@@ -42,6 +44,8 @@ function Hero() {
     </div>
     </div>
     </div>
+    <Movies/>
+    </>
   )
 }
 

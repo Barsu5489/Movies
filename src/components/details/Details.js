@@ -46,12 +46,12 @@ function Details() {
             <div className="movie-information">
                 <div></div>
             <div className="current-description">
-                <h3>Top Gun: Maverick • 2022 • PG-13 • 2h 10m</h3>
+                <h3 data-testid ="movie-title">Top Gun: Maverick • <span data-testid= "movie-release-date">2022 </span>2022 • PG-13 • <span data-testid= "movie-runtime">2h 10m</span></h3>
                 <p>Action</p>
                 <p>Drama</p>
             </div>
             <div className="movie-about">
-                <p>After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.</p>
+                <p data-testid= "movie-overview">After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.</p>
             </div>
             <div className="credits">
                 <p className='credit-details'>Director: <span className='director-name'>Joseph Kosinski</span></p>
