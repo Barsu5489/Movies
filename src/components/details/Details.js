@@ -5,13 +5,13 @@ function Details() {
     
     const { id } = useParams();
     const [movieData, setMovieData] = useState(null);
-    const [error, setError] = useState()
+  
     console.log(movieData)
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=158edbaf63d53e4ad7b56237b05d5776`)
           .then(response => response.json())
           .then(data => setMovieData(data))
-          .catch(error => setError(error));
+          .catch(error => console.log(error));
       }, [id]);
     
       if (!movieData) return <div>Loading...</div>;

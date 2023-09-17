@@ -5,7 +5,7 @@ import Card from '../card/Card';
 
 const Movies = () => {
     const [data, setData] = useState([]);
-    const [error, setError] = useState()
+    const [error, setError] = useState(null)
     console.log(data)
     const url = 'https://api.themoviedb.org/3/discover/movie?api_key=158edbaf63d53e4ad7b56237b05d5776'
     const options = {
@@ -31,7 +31,7 @@ const Movies = () => {
         };
 
         fetchData();
-    }, []);
+    },[]);
 
     return (
         
