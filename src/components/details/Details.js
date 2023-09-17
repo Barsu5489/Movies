@@ -1,6 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 import './details.css'
 function Details() {
+    
+    const { id } = useParams();
+    const [movieData, setMovieData] = useState(null);
+    console.log(movieData)
+    useEffect(() => {
+        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=158edbaf63d53e4ad7b56237b05d5776`)
+          .then(response => response.json())
+          .then(data => setMovieData(data))
+          .catch(error => console.error(error));
+      }, [id]);
+    
+      if (!movieData) return <div>Loading...</div>;
   return (
     <div className='details-container'>
         <div className="sidebar">
@@ -39,19 +52,20 @@ function Details() {
         </div>
        
         <div className="movie-content">
-            <img src="https://s3-alpha-sig.figma.com/img/1856/c95c/9af6d5a4107cc24f878e63ed529a275d?Expires=1695600000&Signature=AS86qp3truWPTvvqdnE0HulXiT-hc5sD39UynsclsNcznyHzn2c8GBQhLbMdvQtw92Amwo4Szvh7KdsIEZT~XwQOVrvqPsFzuRvmNO99MY3gV21sCV5GGUgwF8~xgHgi9rVRtdyemrWmojtnp5vU1XCmggLHTpllrQvFKOX0-bSOHdAHLWqJGXiBZzpVjnyWcrJa2456p5iTTSRI2dXLq1JAGM4V2jkvqdOS-YytO-FHjKOw4y3lGFE-fr9aFBFV2DTwv2toewMUN8YmcXVtusvjvdH5u-6~hew-4fCvVE~xydxRwW4j9GHmOXquhhldZQTAfAJXuRgWnj9gQ9Gm-A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" className='mv-img' alt="" />
+            <img src={`https://image.tmdb.org/t/p/w500/${movieData.backdrop_path}`}className='mv-img' alt="" />
 
             <span className='play-now'><i className='bx bx-play'></i></span>
             <div className="single-movie-details">
             <div className="movie-information">
                 <div></div>
             <div className="current-description">
-                <h3 data-testid ="movie-title">Top Gun: Maverick • <span data-testid= "movie-release-date">2022 </span>2022 • PG-13 • <span data-testid= "movie-runtime">2h 10m</span></h3>
+                <h3 data-testid ="movie-title">Top Gun: Maverick • <span data-testid= "movie-release-date">{movieData.release_date
+} </span>2022 • PG-13 • <span data-testid= "movie-runtime">{movieData.runtime}</span></h3>
                 <p>Action</p>
                 <p>Drama</p>
             </div>
             <div className="movie-about">
-                <p data-testid= "movie-overview">After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.</p>
+                <p data-testid= "movie-overview">{movieData.overview}</p>
             </div>
             <div className="credits">
                 <p className='credit-details'>Director: <span className='director-name'>Joseph Kosinski</span></p>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+
 import './movies.css'
 import Card from '../card/Card';
 
@@ -41,6 +42,7 @@ const Movies = () => {
         {data.map((movie, index) => (
         <Card 
           key={index}
+          movieID={movie.id}
           poster={movie.poster_path}
           title={movie.title}
           releaseDate={movie.release_date}

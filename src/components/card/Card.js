@@ -1,15 +1,13 @@
-  import React from 'react'
-  import './card.css'
-import { useNavigate } from 'react-router-dom'
-  function Card({poster, title, releaseDate, imdbRating}) {
-    const navigate = useNavigate()
-    function handleDetails(){
-      navigate('details')
-    }
-    return (
-      <div>
-          <div className="movie-card" data-testid="movie-card" onClick={handleDetails}>
-              <div className="poster-img">
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './card.css';
+
+function Card({ poster, title, releaseDate, imdbRating, movieID }) {
+  return (
+    <div>
+      <Link to={`/details/${movieID}`} className="movie-card-link">
+        <div className="movie-card" data-testid="movie-card">
+        <div className="poster-img">
                   <img src={`https://image.tmdb.org/t/p/w500/${poster}`} data-testid="movie-poster" alt="Movie" />
                   {/* <img src={``} alt="m" /> */}
                 <p className='watchlist'><i class='bx bxs-heart' ></i></p>
@@ -27,10 +25,10 @@ import { useNavigate } from 'react-router-dom'
               </div>
             </div>
               <p>Action, Adventure, Horror</p>
+        </div>
+      </Link>
+    </div>
+  );
+}
 
-          </div>
-      </div>
-    )
-  }
-
-  export default Card
+export default Card;
