@@ -25,7 +25,7 @@ The application uses the following data sources:
 
 ## Deployment
 
-The application is deployed to Netlify.
+The application is deployed to Netlify. ```https://movy-eight.vercel.app/```
 
 ## License
 
