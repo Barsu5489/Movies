@@ -59,7 +59,7 @@ function Details() {
             <div className="movie-information">
                 <div></div>
             <div className="current-description">
-                <h3 data-testid ="movie-title">Top Gun: Maverick • <span data-testid= "movie-release-date">{movieData.release_date
+                <h3 data-testid ="movie-title">{movieData.title} • <span data-testid= "movie-release-date">{movieData.release_date
 } </span>2022 • PG-13 • <span data-testid= "movie-runtime">{movieData.runtime}</span></h3>
                 <p>Action</p>
                 <p>Drama</p>
