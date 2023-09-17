@@ -5,12 +5,13 @@ function Details() {
     
     const { id } = useParams();
     const [movieData, setMovieData] = useState(null);
+    const [error, setError] = useState()
     console.log(movieData)
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=158edbaf63d53e4ad7b56237b05d5776`)
           .then(response => response.json())
           .then(data => setMovieData(data))
-          .catch(error => console.error(error));
+          .catch(error => setError(error));
       }, [id]);
     
       if (!movieData) return <div>Loading...</div>;
@@ -59,8 +60,7 @@ function Details() {
             <div className="movie-information">
                 <div></div>
             <div className="current-description">
-                <h3 data-testid ="movie-title">{movieData.title} • <span data-testid= "movie-release-date">{movieData.release_date
-} </span>2022 • PG-13 • <span data-testid= "movie-runtime">{movieData.runtime}</span></h3>
+                <h3 data-testid ="movie-title">{movieData.title} • <span data-testid= "movie-release-date"> {new Date(movieData.release_date + 'T00:00:00Z').toUTCString()} </span>2022 • PG-13 • <span data-testid= "movie-runtime">{movieData.runtime}</span></h3>
                 <p>Action</p>
                 <p>Drama</p>
             </div>

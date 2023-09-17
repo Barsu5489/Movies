@@ -15,15 +15,16 @@ function App() {
     
     <Routes>
     <Route path="/" exact="true" element={<Hero/>} />
-    <Route path="/" exact="true" element={<Movies/>} /> path="
+    
   
       <Route path="/details/:id" exact="true" element={<Details />} />
     
     </Routes>
+    <Footer/>
   </BrowserRouter>
     
    
-    <Footer/>
+   
     </div>
   );
 }

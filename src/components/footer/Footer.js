@@ -1,21 +1,31 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
+import { FaFacebookSquare, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
+import './footer.css'
 function Footer() {
   return (
-    <div>
-
-<div class="footer">
-  <a href="#"><img src="facebook-icon.png" alt="Facebook"/></a>
-  <a href="#"><img src="instagram-icon.png" alt="Instagram"/></a>
-  <a href="#"><img src="twitter-icon.png" alt="Twitter"/></a>
-  <a href="#"><img src="youtube-icon.png" alt="YouTube"/></a>
-  
-  <p><a href="#">Conditions of Use</a> | <a href="#">Privacy Policy</a> | <a href="#">Press Room</a></p>
-  
-  <p>©2021 MovieBox by Adriana Eka Prayudha</p>
+<div className="footer">
+  <div className="icon-links">
+      <FaFacebookSquare className="icon"/>
+      <FiInstagram className="icon"/>
+      <FaTwitter className="icon"/>
+      <FaYoutube className="icon"/>
+  </div>
+  <div className="some-links">
+      <Link href={`/`}>
+          <span className="link">Conditions of Use</span>
+      </Link>
+      <Link href={`/`}>
+          <span className="link">Privacy & Policy</span>
+      </Link>
+      <Link href={`/`}>
+          <span className="link">Press Room</span>
+      </Link>
+  </div>
+  <p className="copyrights">©2021 MovieBox by Adriana Eka Prayudha</p>
 </div>
 
-    </div>
   )
 }
 
