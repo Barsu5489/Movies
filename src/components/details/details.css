@@ -14,7 +14,7 @@
     background: #FFF;
     display: flex;
     flex-direction: column;
-    align-items: center; /* This will center the items horizontally */
+    align-items: center; 
 }
 .li-sidebar{
 list-style-type: none;
