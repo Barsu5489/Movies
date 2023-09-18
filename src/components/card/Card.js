@@ -9,7 +9,6 @@ function Card({ poster, title, releaseDate, imdbRating, movieID }) {
         <div className="movie-card" data-testid="movie-card">
         <div className="poster-img">
                   <img src={`https://image.tmdb.org/t/p/w500/${poster}`} data-testid="movie-poster" alt="Movie" />
-                  {/* <img src={``} alt="m" /> */}
                 <p className='watchlist'><i class='bx bxs-heart' ></i></p>
               </div>
               <p data-testid="movie-release-date">{releaseDate}</p>

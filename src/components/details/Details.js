@@ -6,7 +6,6 @@ function Details() {
     const { id } = useParams();
     const [movieData, setMovieData] = useState(null);
   
-    console.log(movieData)
     useEffect(() => {
         fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=158edbaf63d53e4ad7b56237b05d5776`)
           .then(response => response.json())
@@ -30,19 +29,7 @@ function Details() {
                 <li>TV Series</li>
                 <li>Upcoming</li>
             </ul>
-            {/* <div className="home">
-                <p>Home</p>
-            </div>
-            <div className="movies-link">
-                <p>Movies</p>
-                <span className='vector'></span>
-            </div>
-            <div className="series">
-                <p>TV series</p>
-            </div>
-            <div className="upcoming">
-                <p>Upcoming</p>
-            </div> */}
+         
             <div className="start">
                 <p>Play movie quizes and earn free tickets</p>
                 <span>50k people are now playing</span>
