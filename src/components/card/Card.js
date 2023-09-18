@@ -12,7 +12,7 @@ function Card({ poster, title, releaseDate, imdbRating, movieID }) {
                   {/* <img src={``} alt="m" /> */}
                 <p className='watchlist'><i class='bx bxs-heart' ></i></p>
               </div>
-              <p data-testid="movie-release-date">{releaseDate} - Current</p>
+              <p data-testid="movie-release-date">{releaseDate}</p>
               <span>{title}</span>
             <div className="movie-info">
               <div className="movie-rates">
@@ -25,6 +25,7 @@ function Card({ poster, title, releaseDate, imdbRating, movieID }) {
               </div>
             </div>
               <p>Action, Adventure, Horror</p>
+              <h5 data-testid="movie-release-date">Release Date: {releaseDate}</h5>
         </div>
       </Link>
     </div>

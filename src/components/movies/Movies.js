@@ -19,7 +19,7 @@ const Movies = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch(url, options);
+                const response = await fetch(url);
                 const data = await response.json();
                 console.log(response)
                 console.log(data)
@@ -41,11 +41,10 @@ const Movies = () => {
                 <p>Featured Movie</p>
                 <p>See more {'>'}</p>
             </div>
-        {/* <img src="https://image.tmdb.org/t/p/w500/" alt="" /> */}
         <div className="grid-container">
-        {data.map((movie, index) => (
+        {data.map((movie) => (
         <Card 
-          key={index}
+          key={movie.id}
           movieID={movie.id}
           poster={movie.poster_path}
           title={movie.title}
