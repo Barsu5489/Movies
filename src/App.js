@@ -2,7 +2,7 @@
 import './App.css';
 import Hero from './components/hero/Hero';
 import Details from './components/details/Details';
-import Footer from './components/footer/Footer';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <Route path="/details/:id" exact="true" element={<Details />} />
     
     </Routes>
-    <Footer/>
+   
   </BrowserRouter>
     
    
